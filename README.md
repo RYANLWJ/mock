@@ -31,7 +31,7 @@
        module.exports = interfaces
       ```
 
-  3. Require the `interfaces.js` & `mock.js` to your service file.Then use them as  middlewares to your service router. 在你的服务器 js 文件中引入`interfaces.js`和`mock.js`。然后使用它们作为服务路由器的中间件。
+  3. Require the `interfaces.js` & `mock.js` to your service file.Then use them as  router callback functions to your service router. 在你的服务器 js 文件中引入`interfaces.js`和`mock.js`。然后使用它们作为服务路由器的回调函数。
 
      ```js
       // Tip
