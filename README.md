@@ -40,6 +40,6 @@
 
 * Read / Save / Update Json file data. 读取 / 保存 / 更新 Json 文件数据。
    1. You can checkout and customize the default/base methods in `actions.js `file. 你可以查看并根据实际情况自定义`action.js`文件中的默认方法。
-   2. Require the actions.js to your service.js file so that easy to read and write the json file. 引入`action .js`到你的`service.js`文件，以便于读取和写入 json 文件。
+   2. Require the `actions.js` to your service.js file so that easy to read and write the json file. 引入`action .js`到你的`service.js`文件，以便于读取和写入 json 文件。
 
 ## RYAN 👾
