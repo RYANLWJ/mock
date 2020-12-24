@@ -1,15 +1,17 @@
-const fs = require("fs"); // 注意path在node_modules那一层
+const fs = require("fs").promises;
 const interfaces = require("./interfaces.js");
 
 let mock = {};
 // 输出对应的回调函数
 interfaces.forEach(({ name }) => {
-  mock[name] = (req, res) => {
+  mock[name] = async (req, res) => {
     res.setHeader("Content-Type", "application/json; charset=utf-8");
-    fs.readFile("../mock/" + name + ".json", function (err, data) {
-      if (err) throw err;
+    try {
+      const data = await fs.readFile(__dirname + "/jsonFiles/" + name + ".json");
       res.json(JSON.parse(data));
-    });
+    } catch (err) {
+      throw err;
+    }
   };
 });
 
